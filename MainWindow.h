@@ -28,8 +28,7 @@ private:
     double operand1 = 0;
     QString pendingOp;
 
-    double evaluateExpression(const QString& expr);
-    double applyOp(double a, double b, QChar op);
+    double evaluateExpression(const QString& expr, bool* ok);
+    double applyOp(double a, double b, QChar op, bool* ok);
     int precedence(QChar op);
-
 };
